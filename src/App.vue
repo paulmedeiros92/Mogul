@@ -1,28 +1,44 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-view />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  mounted() {
+    localStorage.user = JSON.stringify({ EntityName: 'paulmedeiros' });
   }
 }
 </script>
 
 <style>
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-color: #182835;
+  font-family: Montserrat;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #303f50;
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0c1218;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  height: 100%;
+  margin: 0 10rem 0 10rem;
 }
 </style>
