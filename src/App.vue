@@ -5,18 +5,17 @@
 </template>
 
 <script>
-
 export default {
-  name: 'App',
+  name: "App",
   mounted() {
-    localStorage.user = JSON.stringify({ EntityName: 'paulmedeiros' });
+    localStorage.user = JSON.stringify({ EntityName: "paulmedeiros" });
   }
-}
+};
 </script>
 
 <style>
-
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
   margin: 0;
